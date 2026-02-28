@@ -64,10 +64,10 @@ flowchart TD
 
 ## Target Users
 
-- 📰 News & Media Verification Teams
-- 🏢 Corporate Compliance & Finance Departments
-- ⚖️ Legal & Digital Forensic Experts
-- 🛡️ Cybersecurity & Fraud Detection Teams
+-  News & Media Verification Teams
+-  Corporate Compliance & Finance Departments
+-  Legal & Digital Forensic Experts
+-  Cybersecurity & Fraud Detection Teams
 
 ---
 
