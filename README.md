@@ -28,6 +28,12 @@ This dual-layer approach enables both:
 
 ---
 
+## Vision
+
+To build a trusted digital voice ecosystem where every audio file can be verified, authenticated, and trusted in an era of AI-generated media.
+
+---
+
 ## How It Works
 
 ### Layer 1 – AI Deepfake Detection
