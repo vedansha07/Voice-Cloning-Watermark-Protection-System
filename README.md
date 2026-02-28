@@ -1,6 +1,6 @@
-# 🎙️ Aawazz – AI-Powered Audio Authenticity Verification Framework
+# Aawazz – AI-Powered Audio Authenticity Verification Framework
 
-## 🚨 Problem Statement
+## Problem Statement
 
 Advancements in AI voice synthesis have made it possible to generate highly realistic cloned audio. Deepfake voice technology can now impersonate executives, manipulate public opinion, and compromise legal evidence.
 
@@ -15,7 +15,7 @@ As synthetic media becomes more accessible, trust in digital voice content is er
 
 ---
 
-## 💡 Our Solution
+## Our Solution
 
 **VoiceGuard** is a two-layer voice authenticity framework designed to:
 
@@ -28,15 +28,15 @@ This dual-layer approach enables both:
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
-### 🔹 Layer 1 – AI Deepfake Detection
+### Layer 1 – AI Deepfake Detection
 - Uses a pretrained Wav2Vec2-based classifier
 - Analyzes uploaded audio
 - Outputs authenticity probability score
 - Classifies audio as Real or AI-Generated
 
-### 🔹 Layer 2 – Spectral Watermark Verification
+### Layer 2 – Spectral Watermark Verification
 - Embeds an inaudible binary signature in the mid-frequency band
 - Uses Fast Fourier Transform (FFT) for spectral manipulation
 - Detects watermark presence using threshold-based decoding
@@ -44,28 +44,25 @@ This dual-layer approach enables both:
 
 ---
 
-## 🏗️ System Architecture
-User Uploads Audio
-│
-▼
-Preprocessing (Resampling to 16kHz)
-│
-├──► Deepfake Detection Model
-│ └──► AI Probability Score
-│
-└──► FFT-Based Watermark Detection
-└──► Watermark Integrity Score
-│
-▼
-Decision Engine
-│
-▼
-Authenticity Verdict + Dashboard Visualization
+## System Architecture
 
+```mermaid
+flowchart TD
 
----
+    A[User Uploads Audio File] --> B[Preprocessing Module]
+    B --> C1[Deepfake Detection Model]
+    B --> C2[Watermark Verification Module]
 
-## 🎯 Target Users
+    C1 --> D1[AI Probability Score]
+    C2 --> D2[Watermark Integrity Score]
+
+    D1 --> E[Decision Engine]
+    D2 --> E
+
+    E --> F[Dashboard Output]
+```
+
+## Target Users
 
 - 📰 News & Media Verification Teams
 - 🏢 Corporate Compliance & Finance Departments
@@ -74,7 +71,7 @@ Authenticity Verdict + Dashboard Visualization
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Backend**
 - Python
@@ -97,7 +94,7 @@ Authenticity Verdict + Dashboard Visualization
 
 ---
 
-## 🚀 Features
+## Features
 
 - Upload WAV or MP3 files
 - Real vs AI classification
@@ -109,7 +106,7 @@ Authenticity Verdict + Dashboard Visualization
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### 1️⃣ Clone Repository
 ```bash
