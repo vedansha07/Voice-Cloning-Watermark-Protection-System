@@ -1,4 +1,4 @@
-# Aawazz – AI-Powered Audio Authenticity Verification Framework
+# Aawaaz – AI-Powered Audio Authenticity Verification Framework
 
 ## Problem Statement
 
@@ -17,7 +17,7 @@ As synthetic media becomes more accessible, trust in digital voice content is er
 
 ## Our Solution
 
-**VoiceGuard** is a two-layer voice authenticity framework designed to:
+**Aawaaz** is a two-layer voice authenticity framework designed to:
 
 1. Detect AI-generated audio using a pretrained deepfake detection model
 2. Embed and verify spectral watermarks using FFT-based frequency domain techniques
@@ -116,8 +116,8 @@ flowchart TD
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/your-username/voiceguard.git
-cd voiceguard
+git clone https://github.com/your-username/aawaaz.git
+cd aawaaz
 ```
 ### 2️⃣ Create Virtual Environment
 ```bash

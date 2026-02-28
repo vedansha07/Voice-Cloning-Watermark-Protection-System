@@ -12,15 +12,15 @@ from decision import generate_verdict
 # ---------------------------
 
 st.set_page_config(
-    page_title="VoiceGuard - Audio Authenticity Analyzer",
+    page_title="Aawaaz - Audio Authenticity Analyzer",
     layout="centered"
 )
 
-st.title("VoiceGuard")
+st.title("Aawaaz")
 st.subheader("Dual-Layer Audio Deepfake & Watermark Verification System")
 
 st.write(
-    "VoiceGuard combines AI-based deepfake classification with spectral "
+    "Aawaaz combines AI-based deepfake classification with spectral "
     "watermark verification to evaluate audio authenticity using a "
     "layered risk assessment framework."
 )

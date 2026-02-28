@@ -1,7 +1,7 @@
 """
 decision.py
 
-Decision engine for the VoiceGuard authentication framework.
+Decision engine for the Aawaaz authentication framework.
 This module processes the scores from the deepfake detector and the watermark 
 verification steps to compute a final authenticity risk score and generate a comprehensive verdict.
 """

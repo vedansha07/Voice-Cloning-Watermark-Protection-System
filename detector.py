@@ -1,7 +1,7 @@
 """
 detector.py
 
-Deepfake detection module for VoiceGuard.
+Deepfake detection module for Aawaaz.
 Wraps a pretrained Hugging Face Wav2Vec2-based model into a reusable class.
 """
 
