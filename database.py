@@ -92,3 +92,25 @@ def fetch_all_history() -> List[Dict[str, Any]]:
     conn.close()
     
     return [dict(row) for row in rows]
+
+def clear_history() -> None:
+    """
+    Deletes all temporary analysis records from the 'analysis_history' table.
+    The table structure is kept intact.
+    """
+    if not os.path.exists(DB_PATH):
+        return
+        
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        # Delete all rows without dropping the table
+        cursor.execute('DELETE FROM analysis_history')
+        # Reset the auto-increment counter
+        cursor.execute('DELETE FROM sqlite_sequence WHERE name="analysis_history"')
+        conn.commit()
+    except sqlite3.Error as e:
+        print(f"Database error during clear_history: {e}")
+    finally:
+        if conn:
+            conn.close()
