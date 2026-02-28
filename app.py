@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from detector import DeepfakeDetector
 from watermark import detect_watermark, embed_watermark
 from decision import generate_verdict
-from database import init_db, save_analysis, fetch_all_history
+from database import init_db, save_analysis, fetch_all_history, clear_history
 
 
 # ---------------------------
@@ -271,6 +271,24 @@ else:
         })
         
     st.dataframe(df_data, use_container_width=True)
+    
+    st.write("---")
+    st.warning("This action will permanently delete all analysis history.")
+    
+    if "confirm_clear" not in st.session_state:
+        st.session_state.confirm_clear = False
+        
+    def toggle_confirm():
+        st.session_state.confirm_clear = not st.session_state.confirm_clear
+        
+    st.checkbox("I understand, proceed to clear", value=st.session_state.confirm_clear, on_change=toggle_confirm, key="chk_clear")
+    
+    if st.session_state.confirm_clear:
+        if st.button("Clear History", type="primary"):
+            clear_history()
+            st.session_state.confirm_clear = False
+            st.success("History successfully cleared.")
+            st.rerun()
     
     # ---------------------------
     # Confidence Trend Chart
