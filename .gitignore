@@ -1,6 +1,16 @@
-venv/
-node_modules/
+samples/
+
+# Python
 __pycache__/
 *.pyc
+venv/
+
+# Database
+*.db
+
+# Node junk
+node_modules/
+package-lock.json
+
+# Mac
 .DS_Store
-samples/
