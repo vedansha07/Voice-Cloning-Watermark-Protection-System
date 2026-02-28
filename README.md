@@ -117,7 +117,7 @@ flowchart TD
 ### 1️⃣ Clone Repository
 ```bash
 git clone https://github.com/your-username/aawaaz.git
-cd aawaaz
+cd Voice-Cloning-Watermark-Protection-System
 ```
 ### 2️⃣ Create Virtual Environment
 ```bash
