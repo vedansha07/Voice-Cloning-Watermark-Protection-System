@@ -44,5 +44,27 @@ def generate_verdict(deepfake_label: str, deepfake_score: float, watermark_confi
     # Weighted calculation: 70% weight to AI prediction, 30% weight to watermark absence
     raw_risk_score = (ai_risk * 0.7 + watermark_risk * 0.3) * 100
     risk_score = round(raw_risk_score, 2)
-    
-    
+
+    # 5. Determine the appropriate verdict and explanation based on thresholds
+    if risk_score >= 75:
+        final_verdict = "Synthetic or Heavily Tampered Audio"
+        risk_level = "High"
+        explanation = "AI model indicates strong deepfake characteristics and/or watermark authentication failed."
+    elif risk_score >= 45:
+        final_verdict = "Suspicious Audio"
+        risk_level = "Medium"
+        explanation = "Partial inconsistencies detected between AI classification and watermark verification."
+    else:
+        final_verdict = "Likely Authentic Audio"
+        risk_level = "Low"
+        explanation = "AI classification and watermark verification suggest authenticity."
+        
+    # 6. Construct and return the result dictionary
+    return {
+        "final_verdict": final_verdict,
+        "risk_level": risk_level,
+        "risk_score": risk_score,
+        "explanation": explanation,
+        "ai_risk_component": round(ai_risk * 100, 2),
+        "watermark_risk_component": round(watermark_risk * 100, 2)
+    }
