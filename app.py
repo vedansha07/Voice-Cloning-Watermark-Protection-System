@@ -106,7 +106,6 @@ def inject_css():
         color: var(--text);
         margin-bottom: 16px;
         letter-spacing: -0.05em;
-        text-transform: lowercase;
     }
     .hero-subtitle {
         font-size: 1.125rem;
