@@ -6,7 +6,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # Must be called first
-st.set_page_config(page_title="Aawaaz brutalist", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Aawaaz", layout="wide", initial_sidebar_state="expanded")
 
 from detector import DeepfakeDetector
 from watermark import detect_watermark, embed_watermark
