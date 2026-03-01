@@ -61,31 +61,11 @@ def inject_css():
         background: transparent !important;
     }
     
-    /* Style native sidebar toggle buttons (open and close) to be black blocks */
-    [data-testid="collapsedControl"] button,
-    [data-testid="stSidebarCollapseButton"] button,
-    button[kind="header"] {
-        color: #fff !important;
-        background-color: #000 !important;
-        border: 2px solid #000 !important;
-        border-radius: 0px !important;
-        box-shadow: 2px 2px 0px 0px #000 !important;
-        opacity: 1 !important;
-        transition: all 0.1s !important;
-    }
-    
-    [data-testid="collapsedControl"] svg,
-    [data-testid="stSidebarCollapseButton"] svg,
-    button[kind="header"] svg {
-        color: #fff !important;
-        fill: #fff !important;
-    }
-    
-    [data-testid="collapsedControl"] button:hover,
-    [data-testid="stSidebarCollapseButton"] button:hover,
-    button[kind="header"]:hover {
-        transform: translate(2px, 2px) !important;
-        box-shadow: 0px 0px 0px 0px #000 !important;
+    /* Hide native sidebar toggle buttons entirely */
+    [data-testid="collapsedControl"],
+    [data-testid="stSidebarCollapsedControl"],
+    [data-testid="stSidebarCollapseButton"] {
+        display: none !important;
     }
 
     /* Style Pop-ups, Dataframe toolbars & Fullscreen buttons to match brutalist theme */
