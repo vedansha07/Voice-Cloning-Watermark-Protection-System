@@ -111,7 +111,6 @@ flowchart TD
 - Authenticity confidence score
 - FFT-based watermark embedding
 - Watermark detection & verification
-- Spectrogram visualization
 - Clean dashboard interface
 
 ---
