@@ -56,9 +56,66 @@ def inject_css():
         background-size: 20px 20px;
     }
     
-    /* Hide the top Streamlit header (black stripe) */
+    /* Make the top Streamlit header transparent instead of hiding it entirely */
     header[data-testid="stHeader"] {
-        display: none !important;
+        background: transparent !important;
+    }
+    
+    /* Style native sidebar toggle buttons (open and close) to be black blocks */
+    [data-testid="collapsedControl"] button,
+    [data-testid="stSidebarCollapseButton"] button,
+    button[kind="header"] {
+        color: #fff !important;
+        background-color: #000 !important;
+        border: 2px solid #000 !important;
+        border-radius: 0px !important;
+        box-shadow: 2px 2px 0px 0px #000 !important;
+        opacity: 1 !important;
+        transition: all 0.1s !important;
+    }
+    
+    [data-testid="collapsedControl"] svg,
+    [data-testid="stSidebarCollapseButton"] svg,
+    button[kind="header"] svg {
+        color: #fff !important;
+        fill: #fff !important;
+    }
+    
+    [data-testid="collapsedControl"] button:hover,
+    [data-testid="stSidebarCollapseButton"] button:hover,
+    button[kind="header"]:hover {
+        transform: translate(2px, 2px) !important;
+        box-shadow: 0px 0px 0px 0px #000 !important;
+    }
+
+    /* Style Pop-ups, Dataframe toolbars & Fullscreen buttons to match brutalist theme */
+    [data-testid="stElementToolbar"] {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    [data-testid="stElementToolbar"] > div,
+    [data-testid="StyledFullScreenButton"] {
+        background-color: #000 !important;
+        border: 2px solid #000 !important;
+        border-radius: 0px !important;
+        box-shadow: 2px 2px 0px 0px #000 !important;
+        opacity: 1 !important;
+    }
+    
+    [data-testid="stElementToolbar"] button,
+    [data-testid="StyledFullScreenButton"] {
+        color: #fff !important;
+    }
+    
+    [data-testid="stElementToolbar"] svg,
+    [data-testid="StyledFullScreenButton"] svg {
+        color: #fff !important;
+        fill: #fff !important;
     }
     
     [data-testid="stSidebar"] {
